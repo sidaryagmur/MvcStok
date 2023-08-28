@@ -1,0 +1,20 @@
+﻿@model MvcStok.Models.Entity.Kategoriler
+@{ 
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_mainlayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Kategori", FormMethod.Post)) 
+{ 
+<div class="form-group">
+    @Html.LabelFor(m=>m.KategoriId)
+    @Html.TextBoxFor(m=>m.KategoriId,new {@class="form-control"}) 
+    <br />
+    @Html.LabelFor(m=>m.KategoriAd)
+    @Html.TextBoxFor(m => m.KategoriAd, new {@class="form-control"})
+</div>
+
+<div>
+    <button class="btn btn-warning">Güncelle</button>
+</div>
+}
